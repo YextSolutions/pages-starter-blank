@@ -1,8 +1,6 @@
-# SITE-STARTER-REACT-BASIC
+# Pages Empty Starter
 
-This repository provides a basic example of how to start developing a React site on the Yext Pages system.
-
-Follow this Track on Hitchhikers to build a full website with Search, Directories, Analytics and more based off of this starter repo: https://hitchhikers.yext.com/tracks/pages-development/
+This repository provides an empty starter template for Yext Pages. This starter is recommended if you want to build from scratch or are following a track that requires the empty starter.
 
 ## Getting Started
 
@@ -10,19 +8,24 @@ Follow this Track on Hitchhikers to build a full website with Search, Directorie
 
 1. Have the Yext CLI installed: https://hitchhikers.yext.com/guides/cli-getting-started-resources/01-install-cli/
 1. Have Deno installed, version 1.21.0 or later: https://deno.land/manual/getting_started/installation
-1. Have node installed, version 17 or later: https://nodejs.org/en/download/
+1. Have node installed, version 17: https://nodejs.org/en/download/
 
    - It's recommend to use nvm: https://github.com/nvm-sh/nvm#installing-and-updating or via brew `brew install nvm`
 
-1. Have a Yext account. This is necessary for production builds, deploying on Yext Pages, and pulling local stream document data via `yext pages generate-test-data`.
+1. Have a Yext account. You can sign up for a free account here: https://hitchhikers.yext.com/create-playground-account
+
+
+### _Recommended_: Set up with `pages new` 
+Once you have the prerequisites installed, we recommend running `yext pages new` which will guide you through the setup flow. Alternatively, you can clone this repo directly by following the directions below. 
 
 ### Clone this repo and install dependencies
 
 ```shell
-git clone https://github.com/yext/pages-starter-react-locations
-cd pages-starter-react-locations
+git clone https://github.com/yext/empty-starter
+cd empty-starter
 npm install
 ```
+
 
 ### Recommended Development Flow
 
