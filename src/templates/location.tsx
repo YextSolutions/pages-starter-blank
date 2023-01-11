@@ -26,11 +26,7 @@ export const config: TemplateConfig = {
     $id: "my-stream-id",
     // Specifies the exact data that each generated document will contain. This data is passed in
     // directly as props to the default exported function.
-    fields: [
-      "id",
-      "name",
-      "slug"
-    ],
+    fields: ["id", "name", "slug"],
     // Defines the scope of entities that qualify for this stream.
     filter: {
       entityTypes: ["location"],
@@ -47,7 +43,7 @@ export const config: TemplateConfig = {
  * Defines the path that the generated file will live at for production.
  */
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
-  return document.slug
+  return document.slug ?? document.name;
 };
 
 /**
@@ -89,9 +85,7 @@ const EntityPage: Template<TemplateRenderProps> = ({
   return (
     <>
       <h1>Entity Powered Page</h1>
-      <div>
-        Entity Name: {name}
-      </div>
+      <div>Entity Name: {name}</div>
     </>
   );
 };
