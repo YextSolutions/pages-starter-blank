@@ -15,32 +15,7 @@ import {
   TemplateRenderProps,
 } from "@yext/pages";
 import Favicon from "../public/yext-favicon.ico";
-
-/**
- * Not required for static templates, but will contain the stream configuration for
- * entity-powered templates.
- */
-export const config: TemplateConfig = {
-  // The name of the feature. If not set the name of this file will be used (without extension).
-  // Use this when you need to override the feature name.
-  name: "static-example",
-};
-
-/**
- * Used to either alter or augment the props passed into the template at render time.
- * This function will be run during generation and pass in directly as props to the default
- * exported function.
- *
- * This can be used when data needs to be retrieved from an external (non-Knowledge Graph)
- * source. 
- *
- * If the page is truly static this function is not necessary.
- */
-export const transformProps: TransformProps<TemplateRenderProps> = async (
-  data
-) => {
-  return data
-};
+import { Image } from "@yext/sites-components";
 
 /**
  * Defines the path that the generated file will live at for production.
@@ -48,7 +23,6 @@ export const transformProps: TransformProps<TemplateRenderProps> = async (
 export const getPath: GetPath<TemplateRenderProps> = () => {
   return `index.html`;
 };
-
 
 /**
  * This allows the user to define a function which will take in their template
@@ -72,11 +46,10 @@ export const getHeadConfig: GetHeadConfig<TemplateRenderProps> = ({
           name: "description",
           content: "Static page example meta description.",
         },
-      }
+      },
     ],
   };
 };
-
 
 /**
  * This is the main template. It can have any name as long as it's the default export.
@@ -87,16 +60,13 @@ const Static: Template<TemplateRenderProps> = ({
   path,
   document,
 }) => {
-
-  // This is the site object from the Knowledge Graph. It contains all the data 
-  // for the site entity, and can be accessed in any template, including static templates. 
+  // This is the site object from the Knowledge Graph. It contains all the data
+  // for the site entity, and can be accessed in any template, including static templates.
   const { _site } = document;
 
-  return (
-    <>
-      <h1>Static Page</h1>
-    </>
-  );
+  console.log(_site);
+
+  return <>{_site?.logo && <Image image={_site.logo} />}</>;
 };
 
 export default Static;

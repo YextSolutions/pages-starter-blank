@@ -1,0 +1,64 @@
+buildConfiguration:
+  buildCommand: npm run build && npx pages generate templates && npx pages generate artifacts && ls -al dist && cat dist/artifacts.json && cat dist/templates.json
+
+  # installDependenciesStep is an optional step you can use to improve the efficiency of your build.
+  # The command will be cached in most builds when there have not been any changes to the specified
+  # required files.
+  installDependenciesStep:
+    command: npm install
+    requiredFiles:
+      - "package.json"
+      - "package-lock.json"
+      - ".npmrc"
+
+livePreviewConfiguration:
+  # setupCommand: example command
+  serveCommand: npx serve -p 8080
+
+locales:
+  - en
+  - es
+
+# The site stream allows for specification of site entity whose data will be injected to all
+# generation contexts under the `_site` property.
+siteStream:
+  id: site-stream
+  entityId: blogStarter_site
+  fields:
+    - logo
+    - blogStarter_headerLinks
+    - blogStarter_footerLinks
+
+responseHeaders:
+  - pathPattern: .*
+    headerKey: joe-custom-header
+    headerValues:
+      - joe-custom-value
+
+# Static redirects can establish redirects from individual source paths to individual destination paths.
+staticRedirects:
+  - from: /source.html
+    to: /destination.html
+    status: 301
+# Dynamic redirects can establish redirect groups based on pattern matching.
+# dynamicRedirects:
+# -
+#   from: /dynamic/*
+#   to: /newdynamic/:splat
+#   status: 302
+
+# The sitemap configuration allows for customization or disabling of automated sitemap generation.
+# sitemap:
+#   excludeList:
+#     - exclude1
+#     - exclude2
+#   disableSitemapGeneration: true
+#   fileName: fancy-sitemap
+
+# The authentication configuration allows for usage of a site-level or page-level authentication policy.
+# authentication:
+#   policyName: example-policy
+
+# The serving configuration allows for specification of a reverse proxy domain.
+# serving:
+#   reverseProxyDomain: reverseproxy.com/path
