@@ -29,7 +29,7 @@ siteStream:
 
 # Static redirects can establish redirects from individual source paths to individual destination paths.
 staticRedirects:
-  - from: https://clemently-regular-bee.pgsdemo.com/
+  - from: /financial-professionals/fp-0913
     to: https://properly-oriented-ocelot.pgsdemo.com/financial-professionals/fp-0913
     status: 301
 # Dynamic redirects can establish redirect groups based on pattern matching.
