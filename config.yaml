@@ -28,10 +28,10 @@ siteStream:
 #       - joe-custom-value
 
 # Static redirects can establish redirects from individual source paths to individual destination paths.
-# staticRedirects:
-#   - from: /source.html
-#     to: /destination.html
-#     status: 301
+staticRedirects:
+  - from: https://clemently-regular-bee.pgsdemo.com/
+    to: https://properly-oriented-ocelot.pgsdemo.com/financial-professionals/fp-0913
+    status: 301
 # Dynamic redirects can establish redirect groups based on pattern matching.
 # dynamicRedirects:
 # -
