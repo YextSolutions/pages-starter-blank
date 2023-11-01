@@ -23,7 +23,7 @@ import "../index.css";
  */
 export const config: TemplateConfig = {
   stream: {
-    $id: "locations",
+    $id: "my-stream-id",
     // Specifies the exact data that each generated document will contain. This data is passed in
     // directly as props to the default exported function.
     fields: ["id", "name", "slug"],
@@ -33,8 +33,7 @@ export const config: TemplateConfig = {
     },
     // The entity language profiles that documents will be generated for.
     localization: {
-      locales: ["en", "es"],
-      // primary: true,
+      locales: ["en"],
     },
   },
 };

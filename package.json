@@ -13,7 +13,10 @@
     "build:serve": "npm run build && yext pages serve",
     "serve": "yext pages serve",
     "features": "pages generate features",
-    "ci": "pages generate ci"
+    "ci": "pages generate ci",
+    "fmt": "prettier -w .",
+    "lint": "eslint .",
+    "clean": "rm -rf .artifact-output .yext/ dist/ localData sites-rendered-output"
   },
   "engines": {
     "node": ">=17"

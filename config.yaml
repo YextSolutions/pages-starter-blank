@@ -1,23 +1,16 @@
 buildConfiguration:
-  buildCommand: npm run build && npx pages generate templates && npx pages generate artifacts && ls -al dist && cat dist/artifacts.json && cat dist/templates.json
-
-  # installDependenciesStep is an optional step you can use to improve the efficiency of your build.
-  # The command will be cached in most builds when there have not been any changes to the specified
-  # required files.
+  buildCommand: npm run build:local
   installDependenciesStep:
     command: npm install
     requiredFiles:
-      - "package.json"
-      - "package-lock.json"
-      - ".npmrc"
-
+      - package.json
+      - package-lock.json
+      - .npmrc
 livePreviewConfiguration:
-  # setupCommand: example command
-  serveCommand: npx serve -p 8080
+  setupCommand: ":"
 
 locales:
   - en
-  - es
 
 # The site stream allows for specification of site entity whose data will be injected to all
 # generation contexts under the `_site` property.
@@ -28,18 +21,17 @@ siteStream:
     - logo
     - blogStarter_headerLinks
     - blogStarter_footerLinks
-
-responseHeaders:
-  - pathPattern: .*
-    headerKey: joe-custom-header
-    headerValues:
-      - joe-custom-value
+# responseHeaders:
+#   - pathPattern: .*
+#     headerKey: joe-custom-header
+#     headerValues:
+#       - joe-custom-value
 
 # Static redirects can establish redirects from individual source paths to individual destination paths.
-staticRedirects:
-  - from: /source.html
-    to: /destination.html
-    status: 301
+# staticRedirects:
+#   - from: /source.html
+#     to: /destination.html
+#     status: 301
 # Dynamic redirects can establish redirect groups based on pattern matching.
 # dynamicRedirects:
 # -
