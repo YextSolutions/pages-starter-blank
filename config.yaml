@@ -33,12 +33,10 @@ staticRedirects:
     to: https://properly-oriented-ocelot.pgsdemo.com/financial-professionals/fp-0913
     status: 301
 # Dynamic redirects can establish redirect groups based on pattern matching.
-# dynamicRedirects:
-# -
-#   from: /dynamic/*
-#   to: /newdynamic/:splat
-#   status: 302
-
+dynamicRedirects:
+  - from: /men/*
+    to: https://commerce.skiware.us/men/:splat
+    status: 302
 # The sitemap configuration allows for customization or disabling of automated sitemap generation.
 # sitemap:
 #   excludeList:
