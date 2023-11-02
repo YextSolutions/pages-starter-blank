@@ -21,6 +21,9 @@ siteStream:
     - logo
     - blogStarter_headerLinks
     - blogStarter_footerLinks
+  localization:
+    locales:
+      - en
 # responseHeaders:
 #   - pathPattern: .*
 #     headerKey: joe-custom-header
@@ -33,8 +36,8 @@ staticRedirects:
     to: https://properly-oriented-ocelot.pgsdemo.com/financial-professionals/fp-0913
     status: 301
   # static rewrite
-  - from: /hunter-torres
-    to: /financial-professionals/fp-0866
+  - from: /aarons-store
+    to: /locations/en/aarons-store
     status: 200
 # Dynamic redirects can establish redirect groups based on pattern matching.
 dynamicRedirects:
