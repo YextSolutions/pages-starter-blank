@@ -33,8 +33,8 @@ staticRedirects:
     to: https://properly-oriented-ocelot.pgsdemo.com/financial-professionals/fp-0913
     status: 301
   # static rewrite
-  - from: /ski-home
-    to: https://commerce.skiware.us/unique-slug
+  - from: /hunter-torres
+    to: /financial-professionals/fp-0866
     status: 200
 # Dynamic redirects can establish redirect groups based on pattern matching.
 dynamicRedirects:
@@ -42,9 +42,9 @@ dynamicRedirects:
     to: https://commerce.skiware.us/men/:splat
     status: 302
   # static rewrite
-  - from: /women/*
-    to: https://commerce.skiware.us/women/:splat
-    status: 200
+  # - from: /women/*
+  #   to: https://commerce.skiware.us/women/:splat
+  #   status: 200
 # The sitemap configuration allows for customization or disabling of automated sitemap generation.
 # sitemap:
 #   excludeList:
