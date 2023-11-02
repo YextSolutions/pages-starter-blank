@@ -15,7 +15,6 @@ import {
   TemplateProps,
   TemplateRenderProps,
 } from "@yext/pages";
-import * as React from "react";
 import "../index.css";
 
 /**
@@ -83,7 +82,7 @@ const EntityPage: Template<TemplateRenderProps> = ({
 
   return (
     <>
-      <h1>Entity Powered Page</h1>
+      <h1>Entity Powered Page for Location entities</h1>
       <div>Entity Name: {name}</div>
     </>
   );

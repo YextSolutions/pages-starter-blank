@@ -44,10 +44,10 @@ dynamicRedirects:
   - from: /men/*
     to: https://commerce.skiware.us/men/:splat
     status: 302
-  # static rewrite
-  # - from: /women/*
-  #   to: https://commerce.skiware.us/women/:splat
-  #   status: 200
+  # dynamic rewrite
+  - from: /fin-pros/*
+    to: /financial-professionals/:splat
+    status: 200
 # The sitemap configuration allows for customization or disabling of automated sitemap generation.
 # sitemap:
 #   excludeList:
