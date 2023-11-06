@@ -9,21 +9,22 @@ buildConfiguration:
 livePreviewConfiguration:
   setupCommand: ":"
 
-locales:
-  - en
+# locales:
+#   - en
 
 # The site stream allows for specification of site entity whose data will be injected to all
 # generation contexts under the `_site` property.
-siteStream:
-  id: site-stream
-  entityId: blogStarter_site
-  fields:
-    - logo
-    - blogStarter_headerLinks
-    - blogStarter_footerLinks
-  localization:
-    locales:
-      - en
+# siteStream:
+#   id: site-stream
+#   entityId: blogStarter_site
+#   fields:
+#     - logo
+#     - blogStarter_headerLinks
+#     - blogStarter_footerLinks
+#   localization:
+#     locales:
+#       - en
+
 # responseHeaders:
 #   - pathPattern: .*
 #     headerKey: joe-custom-header
@@ -31,23 +32,23 @@ siteStream:
 #       - joe-custom-value
 
 # Static redirects can establish redirects from individual source paths to individual destination paths.
-staticRedirects:
-  - from: /financial-professionals/fp-0913
-    to: https://properly-oriented-ocelot.pgsdemo.com/financial-professionals/fp-0913
-    status: 301
-  # static rewrite
-  - from: /aarons-store
-    to: /locations/en/aarons-store
-    status: 200
+# staticRedirects:
+#   - from: /financial-professionals/fp-0913
+#     to: https://properly-oriented-ocelot.pgsdemo.com/financial-professionals/fp-0913
+#     status: 301
+#   # static rewrite
+#   - from: /aarons-store
+#     to: /locations/en/aarons-store
+#     status: 200
 # Dynamic redirects can establish redirect groups based on pattern matching.
-dynamicRedirects:
-  - from: /men/*
-    to: https://commerce.skiware.us/men/:splat
-    status: 302
-  # dynamic rewrite
-  - from: /fin-pros/*
-    to: /financial-professionals/:splat
-    status: 200
+# dynamicRedirects:
+#   - from: /men/*
+#     to: https://commerce.skiware.us/men/:splat
+#     status: 302
+#   # dynamic rewrite
+#   - from: /fin-pros/*
+#     to: /financial-professionals/:splat
+#     status: 200
 # The sitemap configuration allows for customization or disabling of automated sitemap generation.
 # sitemap:
 #   excludeList:
@@ -58,7 +59,7 @@ dynamicRedirects:
 
 # The authentication configuration allows for usage of a site-level or page-level authentication policy.
 # authentication:
-#   policyName: example-policy
+  # policyName: example-policy
 
 # The serving configuration allows for specification of a reverse proxy domain.
 # serving:

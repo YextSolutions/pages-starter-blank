@@ -28,11 +28,11 @@ export const config: TemplateConfig = {
     fields: ["id", "name", "slug"],
     // Defines the scope of entities that qualify for this stream.
     filter: {
-      entityTypes: ["location"],
+      entityIds: ["location1"],
     },
     // The entity language profiles that documents will be generated for.
     localization: {
-      locales: ["en"],
+      primary: true
     },
   },
 };
@@ -41,7 +41,7 @@ export const config: TemplateConfig = {
  * Defines the path that the generated file will live at for production.
  */
 export const getPath: GetPath<TemplateProps> = ({ document }) => {
-  return document.slug ?? document.name;
+  return document.slug ?? document.id;
 };
 
 /**
