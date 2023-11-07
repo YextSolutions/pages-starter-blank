@@ -59,7 +59,7 @@ livePreviewConfiguration:
 
 # The authentication configuration allows for usage of a site-level or page-level authentication policy.
 authentication:
-  policyName: policy1
+  policyName: policy2
   includePaths:
     - locations/*
   
