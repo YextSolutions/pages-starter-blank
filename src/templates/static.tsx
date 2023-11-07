@@ -16,6 +16,7 @@ import {
 } from "@yext/pages";
 import Favicon from "../public/yext-favicon.ico";
 import { Image } from "@yext/sites-components";
+import { useAuth0 } from "@auth0/auth0-react";
 
 /**
  * Defines the path that the generated file will live at for production.
@@ -60,13 +61,25 @@ const Static: Template<TemplateRenderProps> = ({
   path,
   document,
 }) => {
+  const { loginWithRedirect } = useAuth0();
+
   // This is the site object from the Knowledge Graph. It contains all the data
   // for the site entity, and can be accessed in any template, including static templates.
   const { _site } = document;
 
-  console.log(_site);
+  React.useEffect(() => {
+    console.log(window.location.origin);
+  }, []);
 
-  return <>{_site?.logo && <Image image={_site.logo} />}</>;
+  return (
+    <>
+      {_site?.logo && (
+        <button onClick={() => loginWithRedirect()}>
+          <Image image={_site.logo} />
+        </button>
+      )}
+    </>
+  );
 };
 
 export default Static;
