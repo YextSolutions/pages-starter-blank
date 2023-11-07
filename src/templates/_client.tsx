@@ -12,7 +12,7 @@ const render = async (pageContext: PageContext<any>) => {
       domain="dev-u3433rooy5m6eezt.us.auth0.com"
       clientId="GF0dafL06NHsW1uSr2IRU840z5I8RP0Z"
       authorizationParams={{
-        redirect_uri: window.location.origin,
+        redirect_uri: `${window.location.origin}/oauth/callback`,
       }}
     >
       <Page {...pageProps} />
