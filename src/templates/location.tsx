@@ -17,6 +17,9 @@ import {
 } from "@yext/pages";
 import "../index.css";
 
+import Header from "../components/header";
+
+
 /**
  * Required when Knowledge Graph Stream is used for a template.
  */
@@ -25,7 +28,7 @@ export const config: TemplateConfig = {
     $id: "my-stream-id",
     // Specifies the exact data that each generated document will contain. This data is passed in
     // directly as props to the default exported function.
-    fields: ["id", "name", "slug"],
+    fields: ["id", "name", "slug", "description"],
     // Defines the scope of entities that qualify for this stream.
     filter: {
       entityIds: ["location1"],
@@ -78,12 +81,20 @@ const EntityPage: Template<TemplateRenderProps> = ({
   path,
   document,
 }) => {
-  const { name } = document;
+  const { name, id, description } = document;
 
   return (
     <>
-      <h1>Entity Powered Page for Location entities</h1>
-      <div>Entity Name: {name}</div>
+      <Header />
+      <div className="centered-container space-y-8">
+        <div className="section space-y-3">
+          <h1>{name} <span className="italic">({id})</span></h1>
+          <div></div>
+        </div>
+        <div className="section">
+          <p>{description}</p>
+        </div>
+      </div>
     </>
   );
 };

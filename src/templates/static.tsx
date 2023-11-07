@@ -17,6 +17,8 @@ import {
 import Favicon from "../public/yext-favicon.ico";
 import { Image } from "@yext/sites-components";
 
+import Header from "../components/header";
+
 /**
  * Defines the path that the generated file will live at for production.
  */
@@ -68,9 +70,24 @@ const Static: Template<TemplateRenderProps> = ({
 
   return  (
     <>
-      <div className="centered-container">
-        <h1>Hello World</h1>
-        <a href="/locations/ny/new-york/location1">Location Page</a>
+      <Header />
+      <div className="centered-container space-y-8">
+        
+        <div className="section">
+          <h1>Home Page</h1>
+        </div>
+
+        <div>
+          <h2>Location Pages</h2>
+          <ul>
+            <li className="ml-8 list-disc">
+              <a href="/locations/ny/new-york/location1" className="prose prose-a text-blue-800 hover:underline">
+                Location1
+              </a>
+            </li>
+          </ul>
+        </div>
+      
       </div>
     </>
   )

@@ -22,8 +22,12 @@
     "node": ">=17"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.0.18",
     "@yext/sites-components": "^1.0.0-rc.5",
     "clsx": "^1.2.1",
+    "i": "^0.3.7",
+    "npm": "^10.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "tailwind-merge": "^1.6.2"
