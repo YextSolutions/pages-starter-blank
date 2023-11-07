@@ -59,7 +59,7 @@ dynamicRedirects:
 
 # The authentication configuration allows for usage of a site-level or page-level authentication policy.
 authentication:
-  policyName: auth0-policy
+  policyName: oidc
   includePaths: # the paths which should be included in the auth policy
     - /locations/*
 # The serving configuration allows for specification of a reverse proxy domain.
