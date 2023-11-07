@@ -58,8 +58,11 @@ livePreviewConfiguration:
 #   fileName: fancy-sitemap
 
 # The authentication configuration allows for usage of a site-level or page-level authentication policy.
-# authentication:
-  # policyName: example-policy
+authentication:
+  policyName: policy1
+    includePaths:
+      - locations/*
+  
 
 # The serving configuration allows for specification of a reverse proxy domain.
 # serving:
