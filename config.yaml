@@ -58,10 +58,10 @@ dynamicRedirects:
 #   fileName: fancy-sitemap
 
 # The authentication configuration allows for usage of a site-level or page-level authentication policy.
-# authentication:
-#   policyName: password
-#   includePaths: # the paths which should be included in the auth policy
-#     - /locations/*
+authentication:
+  policyName: password
+  includePaths: # the paths which should be included in the auth policy
+    - /locations/*
 # The serving configuration allows for specification of a reverse proxy domain.
 # serving:
 #   reverseProxyDomain: reverseproxy.com/path
