@@ -61,7 +61,7 @@ livePreviewConfiguration:
 authentication:
   policyName: policy2
   includePaths:
-    - locations/*
+    - /locations/*
   
 
 # The serving configuration allows for specification of a reverse proxy domain.

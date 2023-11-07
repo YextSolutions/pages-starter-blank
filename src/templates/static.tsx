@@ -70,7 +70,7 @@ const Static: Template<TemplateRenderProps> = ({
     <>
       <div className="centered-container">
         <h1>Hello World</h1>
-        <a href="/locations/ny/new-york/location1"></a>
+        <a href="/locations/ny/new-york/location1">Location Page</a>
       </div>
     </>
   )
