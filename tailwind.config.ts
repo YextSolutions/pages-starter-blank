@@ -1,11 +1,9 @@
+import type { Config } from "tailwindcss";
+
 export default {
-  content: ["./src/**/*.{html,js,jsx,ts,tsx}"],
+  content: [],
   theme: {
-    extend: {
-      colors: {
-        orange: "#ff9500",
-        "dark-orange": "#db8000",
-      },
-    },
+    extend: {},
   },
-};
+  plugins: [],
+} satisfies Config;
